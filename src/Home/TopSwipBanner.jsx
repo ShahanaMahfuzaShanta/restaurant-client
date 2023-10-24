@@ -55,11 +55,11 @@ const TopSwipBanner = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper w-full h-[500px]"
+        className="mySwiper w-full"
       >
         {bannerData?.map((banner) => (
           <SwiperSlide key={banner.id}>
-            <img className="w-full h-[500px]" src={banner.image} alt="" />
+            <img className="w-full" src={banner.image} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>
