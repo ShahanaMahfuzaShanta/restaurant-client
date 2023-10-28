@@ -5,6 +5,8 @@ import HomeSecondBanner from './HomeSecondBanner/HomeSecondBanner';
 import FromMenu from './FromMenu/FromMenu';
 import CallUs from './CallUs';
 import ChefRecommend from './ChefRecommend/ChefRecommend';
+import FeaturedItem from './FeaturedItem/FeaturedItem';
+import Reviews from './Reviews/Reviews';
 
 const Home = () => {
     return (
@@ -15,6 +17,8 @@ const Home = () => {
         <FromMenu />
         <CallUs />
         <ChefRecommend />
+        <FeaturedItem />
+        <Reviews />
         </>
     );
 };
