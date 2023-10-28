@@ -1,29 +1,25 @@
 import React from 'react';
 import UserTitle from '../../Components/UserTitle';
-import { useQuery } from 'react-query';
-import axios from 'axios';
-import MenuProperty from './MenuProperty';
+import useMenu from '../../Hooks/useMenu';
+import ButtonBottomBorder from '../../Components/ButtonBottomBorder';
+import MenuCard from '../../Components/menuCard';
 
 const FromMenu = () => {
-    const { refetch, data: menu = [] } = useQuery({
-        queryKey: ["menu"],
-        queryFn: async () => {
-          const res = await axios.get(`http://localhost:5000/menu`);
-          console.log(res?.data);
-          return res?.data;
-        },
-      });
+    const [menu] = useMenu();
+
+      const popularMenu = menu.filter(item => item.category === 'popular')
     return (
         <>
         
         <UserTitle heading="Check it Out" title="From Our Menu" />
-        <div className='grid grid-cols-2 w-[900px] mx-auto'>
+        <div className='grid grid-cols-2 w-[900px] mx-auto gap-4'>
             {
-                menu?.slice(0, 6).map(menuItem => ( <MenuProperty
+                popularMenu?.map(menuItem => ( <MenuCard
                 key={menu?._id} menuItem={menuItem}
-                ></MenuProperty>))
+                ></MenuCard>))
             }
         </div>
+        <ButtonBottomBorder buttonTitle="View Full Menu" />
         </>
     );
 };
