@@ -17,7 +17,7 @@ const Card = ({menuItem}) => {
           <p className="text-sm font-normal font-['Inter'] leading-5">{recipe}</p>
           <div className="card-actions">
           <div className="mx-auto text-center">
-            <button className="w-40 rounded-lg border-b-2 border-yellow-600 hover:border-none py-2 uppercase font-['Inter'] text-sm font-semibold bg-gray-200 hover:bg-gray-800 text-yellow-600">Add to Cart</button>
+            <button className="w-40 rounded-lg border-b-2 border-yellow-600 py-2 uppercase font-['Inter'] text-sm font-semibold bg-gray-200 hover:bg-gray-800 text-yellow-600">Add to Cart</button>
         </div>
           </div>
         </div>
