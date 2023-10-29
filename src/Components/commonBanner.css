@@ -1,0 +1,15 @@
+.banner1{
+    background-image: url('../assets/menu/banner3.jpg');
+}
+.dessert-banner{
+    background-image: url('../assets/menu/dessert-bg.jpeg');
+}
+.pizza-banner{
+    background-image: url('../assets/menu/pizza-bg.jpg');
+}
+.salad-banner{
+    background-image: url('../assets/menu/salad-bg.jpg');
+}
+.soup-banner{
+    background-image: url('../assets/menu/soup-bg.jpg');
+}
